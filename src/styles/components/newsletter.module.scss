@@ -1,0 +1,78 @@
+@import "../utils/mixins";
+
+.newsletter__{
+  &containerNewsletter{
+    @include grid();
+    @include display-flex(center, center, column);
+    padding: 24px;
+    margin-top: 40px;
+    border-top: 1px solid $tertiary-color;
+    border-bottom: 1px solid $tertiary-color;
+    background-color: $white-2;
+
+    @include mq('640') {
+      @include display-flex(center, center, row);
+      gap: 15px;
+    }
+  }
+
+  &title{
+    @include text("xxg", $fontBold);
+    color: $secondary-color;
+    margin-bottom: 12px;
+    @include mq('640') {
+      width: 100%;
+      text-align: end;
+      margin-bottom: 0;
+    }
+  }
+
+  &containerInput{
+    @include display-flex(center, space-between, row);
+    gap: 15px;
+
+    @include mq('640') {
+     gap: 0;
+     @include display-flex(center, flex-start, row);
+     width: 100%;
+     text-align: start;
+    }
+  }
+
+  &input{
+    border-radius: 4px;
+    border: 1px solid $secondary-color;
+    background: $white;
+    @include size(100%, 26px);
+    &::placeholder{
+      @include text("m", $fontRegular);
+      color: $secondary-color;
+      padding: 10px;
+    }
+
+    @include mq('640') {
+      max-width: 468px;
+      @include size(100%, 40px);
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &button{
+    @include size(80px, 26px);
+    @include text("m", $fontRegular);
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    &:hover{
+      background-color: darken($primary-color, 10%);
+      cursor: pointer;
+    }
+
+    @include mq('640') {
+      @include size(131px, 40px);
+    }
+  }
+}

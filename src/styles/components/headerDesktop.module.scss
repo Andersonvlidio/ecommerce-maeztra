@@ -1,0 +1,74 @@
+@import "../utils/mixins";
+
+.headerDesktop__{
+  &containerHeaderDesktop{
+    @include grid();
+    @include size(100%, 80px);
+    @include display-flex(center, space-between, row);
+    padding: 15px;
+    
+  }
+
+  &containerInput{
+    @include display-flex(center, center, row);
+    flex-grow: 1;
+  }
+
+  &input{
+    border-radius: 4px;
+    border: none;
+    background-color: $tertiary-color;
+    max-width: 380px;
+    @include size(100%, 40px);
+    &::placeholder{
+      @include text("m", $fontRegular);
+      color: $secondary-color;
+      padding: 10px;
+    }
+
+    @include mq('1350') {
+      max-width: 520px;
+    }
+    @include mq('1600') {
+      max-width: 672px;
+    }
+  }
+
+  &button{
+    @include size(119px, 40px);
+    @include text("m", $fontRegular);
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    &:hover{
+      background-color: darken($primary-color, 10%);
+      cursor: pointer;
+    }
+
+  }
+
+  &warperSearchMinicart{
+    @include display-flex(center, center, row);
+    gap: 15px;
+  }
+
+  &containerIcons,
+  &minicart{
+    @include display-flex(center, center, row);
+    @include text("m", $fontRegular);
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  &minicart{
+    border: 1px solid $primary-color;
+    border-radius: 8px;
+    padding: 12px;
+
+    &:hover{
+      background-color: $primary-color;
+      color: $white;
+    }
+  } 
+}

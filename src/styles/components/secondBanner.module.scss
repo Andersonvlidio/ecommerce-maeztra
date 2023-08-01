@@ -1,0 +1,52 @@
+@import "../utils/mixins";
+
+.secondBanner__{
+
+  &containerSecondBanner {
+    @include grid();
+    padding: 0 30px;
+    margin-top: 23px;
+
+    @include mq('1024') {
+      display: flex;
+      gap: 60px;
+    }
+  }
+
+  &containerTexts {
+    @include display-flex(flex-start, center, column);
+    text-align: start;
+    @include mq('1024') {
+      max-width: 420px;
+    }
+  }
+
+  &title {
+    @include text("g", $fontBold);
+    color: $black;
+    margin-bottom: 16px;
+  }
+
+  &description{
+    @include text("m", $fontRegular);
+    color: $black;
+    margin-bottom: 16px;
+    text-align: start;
+  }
+
+  &image {
+    width: 100% !important;
+    height: 100% !important;
+    @include mq('1024') {
+      width:500px !important;
+    }
+
+    @include mq('1200') {
+      width: 776px !important;
+    }
+
+    @include mq('1350') {
+      width: 100% !important;
+    }
+  }
+}

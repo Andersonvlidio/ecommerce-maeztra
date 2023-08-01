@@ -1,0 +1,23 @@
+@import "../utils/mixins";
+
+.header__ {
+  &containerHeader {
+    @include display-flex(center, space-between, row);
+    @include size(100%, 88px);
+    padding: 20px;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  &warperMenuLogo,
+  &warperSearchMinicart{
+    @include display-flex(center, center, row);
+  }
+
+  &warperMenuLogo{
+    gap: 20px;
+  }
+
+  &warperSearchMinicart{
+    gap: 40px;
+  }
+}

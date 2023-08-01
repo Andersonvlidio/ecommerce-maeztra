@@ -1,0 +1,8 @@
+@import "../utils/mixins";
+
+.carouselComponent{
+  &__container{
+    @include grid();
+    @include display-flex(center, center, row);
+  }
+}

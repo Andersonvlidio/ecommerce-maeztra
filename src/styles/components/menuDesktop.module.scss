@@ -1,0 +1,33 @@
+@import "../utils/mixins";
+
+.menuDesktop__{
+  &container{
+    @include grid();
+    @include size(100%, 40px);
+    background-color: $white;
+
+    @include mq('768', max){
+      display: none;
+    }
+  }
+
+  &menuDesktopItems{
+    @include display-flex(center, space-evenly, row);
+  }
+
+  &menuDesktopItem{
+    @include display-flex(center, center, row);
+    @include text('m', $fontRegular);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+
+    &:hover{
+      color: $primary-color;
+    }
+    &:first-child{
+      color: $primary-color;
+      font-weight: $fontBold;
+    }
+  }
+}

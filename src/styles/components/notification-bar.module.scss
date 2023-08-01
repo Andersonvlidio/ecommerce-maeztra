@@ -1,0 +1,16 @@
+@import "../utils/mixins";
+
+.notificationBar__ {
+  &containerNotificationBar {
+    @include size(100%, 24px);
+    @include display-flex(center, center, row);
+    background-color: $secondary-color;
+    margin: 0 auto;
+  }
+
+  &text{
+    @include text("pp");
+    @include grid();
+    color: $white;
+  }
+}

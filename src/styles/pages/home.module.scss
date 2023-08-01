@@ -1,0 +1,8 @@
+@import "../utils/mixins";
+
+.home__{
+  &containerHome{
+    @include size(100%);
+    text-align: center;
+  }
+}

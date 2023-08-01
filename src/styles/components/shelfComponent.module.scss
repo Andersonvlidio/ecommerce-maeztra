@@ -1,0 +1,93 @@
+@import "../utils/mixins";
+
+.carouselComponent__container{
+  @include grid();
+  @include display-flex(center, center, row);
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.carouselComponent__containerMobile{
+  padding-left: 16px;
+
+  @include mq('1560') {
+    padding-left: 0;
+  }
+}
+
+.shelf__{
+
+  &root{
+    @include grid();
+  }
+
+  &controls{
+
+    @include mq('1560') {
+      top: calc(50% - 10.625rem / 2);
+      left: -29px;
+      right: -29px;
+    }
+  }
+
+  &control{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    & >svg{
+      height: 4rem !important;
+      width: 4rem !important;
+    }
+  }
+
+  &containerShelf{
+    @include display-flex(center, center, column);
+  }
+
+  &title{
+    @include text("xg", $fontBold);
+    color: $secondary-color;
+    margin: 74px 0 16px;
+  }
+
+  &containerShelfInfos{
+    @include display-flex(flex-start, center, column);
+    margin: 6px 0;
+    padding: 0 27px;
+  }
+
+  &price{
+    @include text("gl", $fontBold);
+    color: $secondary-color;
+    margin-top: 8px;
+  }
+
+  &name{
+    @include text("g", $fontRegular);
+    color: $black;
+    margin-top: 8px;
+  }
+
+  &description{
+    @include text("p", $fontRegular);
+    color: $black;
+    opacity: 0.5;
+    margin-top: 8px;
+    text-align: start;
+    @include size(100%, 50px);
+  }
+
+  &button{
+    @include size(100%, 35px);
+    @include text("g", $fontRegular);
+    margin-top: 8px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    &:hover{
+      background-color: darken($primary-color, 10%);
+      cursor: pointer;
+    }
+  }
+}

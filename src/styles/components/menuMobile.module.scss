@@ -1,0 +1,65 @@
+@import "../utils/mixins";
+
+.menuMobile__{
+  &container{
+    display: block;
+  }
+
+  &togleMenu{
+    display: block;
+
+    @include mq('768') {
+      cursor: pointer;
+      font-size: 24px;
+      color: #333;
+    }
+  }
+
+  &menuItems{
+    display: block;
+
+    @include mq('768') {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &containerMenuWrapper{
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0; 
+    height: 120vh;
+    width: 450px;
+    background-color: $tertiary-color;
+  }
+  
+  &headerMenu{
+    @include display-flex(center, space-between, row);
+    @include size(100%, 30px);
+    @include text("m", $fontBold);
+    background-color: $secondary-color;
+    color: $white;
+    padding: 15px;
+  }
+
+  &menuItems{
+    @include display-flex(flex-start, center, column);
+    margin-top: 15px;
+    gap: 15px;
+    padding: 25px;
+  }
+
+  &menuItem{
+    @include text("m", $fontRegular);
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+    border-bottom: 1px solid $white;
+
+    &:hover{
+      color: $primary-color;
+    }
+  }
+}

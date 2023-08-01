@@ -1,0 +1,24 @@
+@import "../utils/mixins";
+
+.carouselComponent__container{
+  @include grid();
+  @include display-flex(center, center, row);
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.carouselComponent__containerMobile{
+  padding-left: 30px;
+
+  @include mq('1560') {
+    padding-left: 0;
+  }
+}
+
+.brand__{
+  &title{
+    @include text("xg", $fontBold);
+    color: $secondary-color;
+    margin: 74px 0 16px;
+  }
+}

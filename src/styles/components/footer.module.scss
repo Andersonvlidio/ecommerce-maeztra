@@ -1,0 +1,65 @@
+@import "../utils/mixins";
+
+.footer__{
+  &containerFooterDesktop{
+    @include size(100%, 290px);
+    @include grid();
+    @include display-flex(center, space-evenly, row);
+    background-color: $white-2;
+  }
+
+  &containerInfo{
+    @include display-flex(flex-start, flex-start, column);
+    height: 187px;
+  }
+
+  &title{
+    @include text("g", $fontRegular);
+    color: $secondary-color;
+    margin-bottom: 24px;
+  }
+
+  &text{
+    @include text("p", $fontRegular);
+    color: $secondary-color;
+    margin-bottom: 24px;
+  }
+
+  &containerFooterbar{
+    @include display-flex(initial, center, column);
+    background-color: $secondary-color;
+    gap: 35px;
+    padding: 25px 10px 32px;
+
+    @include mq('1024') {
+      @include display-flex(center, space-around, row);
+      padding: 16px 0;
+    }
+  }
+
+  &containerFlagsFooter{
+    @include display-flex(center, space-evenly, row);
+
+    @include mq('1024') {
+      gap: 22px
+    }
+  }
+
+  &footerLogo{
+    @include display-flex(center, space-evenly, row);
+
+    @include mq('1024') {
+      gap: 22px
+    }
+  }
+
+  &containerLogofooter{
+    @include display-flex(flex-start, center, column);
+    gap: 10px;
+  }
+
+  &footerTextLogo{
+    @include text("ppp", $fontRegular);
+    color: $white;
+  }
+}
