@@ -1,6 +1,6 @@
 # Maeztra Ecommerce
 
-[Link do projeto](https://ecommerce-maeztra-fxzy7swy3-andersonvlidio.vercel.app/)
+[Link do projeto](https://ecommerce-maeztra.vercel.app/)
 
 ## Ferramentas utilizadas
 - Next Js [Next.js Documentation](https://nextjs.org/docs)
