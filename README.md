@@ -1,34 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Maeztra Ecommerce
 
-## Getting Started
+[Link do projeto](https://ecommerce-maeztra-fxzy7swy3-andersonvlidio.vercel.app/)
 
-First, run the development server:
+## Ferramentas utilizadas
+- Next Js [Next.js Documentation](https://nextjs.org/docs)
+- Sass [Sass](https://sass-lang.com/documentation/)
+- Mantine Ui [Mantine UI](https://mantine.dev/)
+- vercel [vercel](https://vercel.com/docs)
+## Iniciar projeto
+ - Bixar o projeto, ou clonar.
+ - baixar as dependências: npm i, yarn.
+ - entrar na pasta do projeto.
+ - yarn dev.
+ - Abrir [http://localhost:3000](http://localhost:3000) para ver os resultados.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Descrição
+
+- Um site construido com NextJs que consome uma api de criadas internamente e estilizado com Sass. Obejetivo desse projeto foi concluir um desafio da empresa Maeztra.
+
+## backend
+- Criei apis com o NextJs para retornar os dados do carousel.
+As apis se encontra dentro de `pages/apis`.
+
+- Para fazer as request no front eu usei o [Axios](https://axios-http.com/docs/intro)
+
+#### Retorna todos os itens
+
+```http
+  GET /api/products
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Retorna todas as marcas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```http
+  GET /api/brands
+```
+#### Retorna todas as vantagens
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```http
+  GET /api/vantages
+```
+#### Retorna todas as categorias
 
-## Learn More
+```http
+  GET /api/categories
+```
 
-To learn more about Next.js, take a look at the following resources:
+##### exemplo com axios:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```const fetchData = async () => {
+      try {
+        const response = await axios.get<Shelfs[]>("/api/products");
+        const data = response.data;
+        setItems(data);
+      } catch (error) {
+        console.error("Ocorreu um erro na requisição:", error);
+      }
+    };
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O deploy foi feito através do site do Vercel pois o github Pages não tem compatibilidade com páginas renderizadas no servidor. 
+Como criei apis locais, e usei o component <Image /> para renderizar as imagens, tive que fazer o deploy pelo vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+
+| ![Anderson Vieira Lidio](https://avatars0.githubusercontent.com/u/59943925?s=400&u=56d24f89e2742b77de0ae9e9de2d0005f566395c&v=4) |
+| :------------------------------------------------------------------------------------------------------------------------------: |
+|                                     [Anderson Veira Lidio](https://github.comAndersonvlidio)                                     |
