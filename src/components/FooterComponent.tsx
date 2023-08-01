@@ -36,58 +36,107 @@ const FooterComponent = () => {
         <div className={styles.footer__containerFooterDesktop}>
           <div className={styles.footer__containerInfo}>
             <span className={styles.footer__title}>Informações</span>
-            <span className={styles.footer__text}>Quem Somos</span>
-            <span className={styles.footer__text}>Prazo de Envio</span>
-            <span className={styles.footer__text}>Trocas e Devoluções</span>
-            <span className={styles.footer__text}>Promoções e Cupons</span>
+            <a className={styles.footer__text} href="#">
+              Quem Somos
+            </a>
+            <a className={styles.footer__text} href="#">
+              Prazo de Envio
+            </a>
+            <a className={styles.footer__text} href="#">
+              Trocas e Devoluções
+            </a>
+            <a className={styles.footer__text} href="#">
+              Promoções e Cupons
+            </a>
           </div>
           <div className={styles.footer__containerInfo}>
             <span className={styles.footer__title}>Minha Conta</span>
-            <span className={styles.footer__text}>Minha Conta</span>
-            <span className={styles.footer__text}>Meus Pedidos</span>
-            <span className={styles.footer__text}>Cadastre-se</span>
+            <a className={styles.footer__text} href="#">
+              Minha Conta
+            </a>
+            <a className={styles.footer__text} href="#">
+              Meus Pedidos
+            </a>
+            <a className={styles.footer__text} href="#">
+              Cadastre-se
+            </a>
           </div>
           <div className={styles.footer__containerInfo}>
             <span className={styles.footer__title}>Onde nos Encontrar</span>
-            <span className={styles.footer__text}>Lojas</span>
-            <span className={styles.footer__text}>Endereço</span>
+            <a className={styles.footer__text} href="#">
+              Lojas
+            </a>
+            <a className={styles.footer__text} href="#">
+              Endereço
+            </a>
           </div>
         </div>
       )}
 
       <div className={styles.footer__containerFooterbar}>
         <div className={styles.footer__containerFlagsFooter}>
-          <Image src="/facebook.svg" alt="Facebook" width={32} height={32} />
-          <Image src="/instagram.svg" alt="Instagram" width={32} height={32} />
-          <Image src="/linkedin.svg" alt="Twitter" width={32} height={32} />
-          <Image src="/youtube.svg" alt="Youtube" width={32} height={32} />
+          <a href="#">
+            <Image src="/facebook.svg" alt="Facebook" width={32} height={32} />
+          </a>
+          <a href="#">
+            <Image
+              src="/instagram.svg"
+              alt="Instagram"
+              width={32}
+              height={32}
+            />
+          </a>
+          <a href="#">
+            <Image src="/linkedin.svg" alt="Twitter" width={32} height={32} />
+          </a>
+          <a href="#">
+            <Image src="/youtube.svg" alt="Youtube" width={32} height={32} />
+          </a>
         </div>
         <div className={styles.footer__containerFlagsFooter}>
-          <Image src="/visa.svg" alt="Facebook" width={32} height={25} />
-          <Image src="/mastercard.svg" alt="Instagram" width={32} height={25} />
-          <Image src="/visa.svg" alt="Twitter" width={32} height={25} />
-          <Image src="/mastercard.svg" alt="Youtube" width={32} height={25} />
+          <a href="#">
+            <Image src="/visa.svg" alt="Facebook" width={32} height={25} />
+          </a>
+          <a href="#">
+            <Image
+              src="/mastercard.svg"
+              alt="Instagram"
+              width={32}
+              height={25}
+            />
+          </a>
+
+          <a href="#">
+            <Image src="/visa.svg" alt="Twitter" width={32} height={25} />
+          </a>
+          <a href="#">
+            <Image src="/mastercard.svg" alt="Youtube" width={32} height={25} />
+          </a>
         </div>
         <div className={styles.footer__footerLogo}>
           <div className={styles.footer__containerLogofooter}>
             <span className={styles.footer__footerTextLogo}>Powered by</span>
             <div className={styles.footer__containerLogofooter}>
-              <Image
-                src="/vtexLogo.svg"
-                alt="Facebook"
-                width={67}
-                height={25}
-              />
+              <a href="#">
+                <Image
+                  src="/vtexLogo.svg"
+                  alt="Facebook"
+                  width={67}
+                  height={25}
+                />
+              </a>
             </div>
           </div>
           <div className={styles.footer__containerLogofooter}>
             <span className={styles.footer__footerTextLogo}> Developed by</span>
-            <Image
-              src="/maeztraLogoFooter.svg"
-              alt="Instagram"
-              width={118}
-              height={25}
-            />
+            <a href="#">
+              <Image
+                src="/maeztraLogoFooter.svg"
+                alt="Instagram"
+                width={118}
+                height={25}
+              />
+            </a>
           </div>
         </div>
       </div>

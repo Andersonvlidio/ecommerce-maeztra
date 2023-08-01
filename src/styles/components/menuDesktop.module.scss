@@ -13,6 +13,7 @@
 
   &menuDesktopItems{
     @include display-flex(center, space-evenly, row);
+    height: 100%
   }
 
   &menuDesktopItem{
@@ -20,6 +21,7 @@
     @include text('m', $fontRegular);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    height: 100%;
 
 
     &:hover{

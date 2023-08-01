@@ -23,6 +23,11 @@
     @include text("p", $fontRegular);
     color: $secondary-color;
     margin-bottom: 24px;
+    text-decoration: none;
+
+    &:hover{
+      color: $primary-color;
+    }
   }
 
   &containerFooterbar{

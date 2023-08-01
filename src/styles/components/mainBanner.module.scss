@@ -1,15 +1,6 @@
 @import "../utils/mixins";
 
 .mainBanner__{
-  &controls{
-
-    @include mq('1560') {
-      top: calc(50% - 10.625rem / 2);
-      left: -29px;
-      right: -29px;
-    }
-  }
-
   &control{
     background-color: transparent;
     border: none;
