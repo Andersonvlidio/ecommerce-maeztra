@@ -1,11 +1,12 @@
 @import "../utils/mixins";
-
 .header__ {
+
   &containerHeader {
     @include display-flex(center, space-between, row);
     @include size(100%, 88px);
     padding: 20px;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+    background-color: white;
   }
 
   &warperMenuLogo,
@@ -19,5 +20,13 @@
 
   &warperSearchMinicart{
     gap: 40px;
+  }
+
+  &fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
   }
 }

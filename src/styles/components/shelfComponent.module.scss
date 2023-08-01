@@ -22,6 +22,10 @@
   }
 
   &controls{
+    display: none;
+    @include mq('1024') {
+      display: flex;
+    }
 
     @include mq('1560') {
       top: calc(50% - 10.625rem / 2);

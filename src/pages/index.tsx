@@ -11,6 +11,7 @@ import Newsletter from "@/components/Newsletter";
 import FooterComponent from "@/components/FooterComponent";
 import isMobile from "../utils/IsMobile";
 import HeaderDesktop from "@/components/HeaderDesktop";
+import ModalComponent from "@/components/ModalComponent";
 
 const Home = () => {
   const isMobileScreen = isMobile(1024);
@@ -25,6 +26,7 @@ const Home = () => {
       <SecondBanner />
       <Newsletter />
       <FooterComponent />
+      <ModalComponent />
     </div>
   );
 };

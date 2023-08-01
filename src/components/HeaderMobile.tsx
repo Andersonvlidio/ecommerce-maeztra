@@ -2,18 +2,23 @@ import Image from "next/image";
 import styles from "../styles/components/headerMobile.module.scss";
 
 import MenuMobile from "./MenuMobile";
+import useFixedHeader from "../utils/FixerdHeader";
 
 const Header = () => {
+  const { isHeaderFixed } = useFixedHeader();
+  const headerClasses = `${styles.header__containerHeader} ${
+    isHeaderFixed ? styles.header__fixo : ""
+  }`;
   return (
     <>
-      <header className={styles.header__containerHeader}>
+      <header className={headerClasses}>
         <div className={styles.header__warperMenuLogo}>
           <div className={styles.header__containerMenuIcon}>
             <MenuMobile />
           </div>
-          <div className={styles.header__containerLogo}>
+          <a className={styles.header__containerLogo} href="#">
             <Image src="/logo-maeztra.jpg" alt="logo" width={110} height={12} />
-          </div>
+          </a>
         </div>
 
         <div className={styles.header__warperSearchMinicart}>

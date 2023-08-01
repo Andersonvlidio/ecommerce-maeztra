@@ -61,6 +61,10 @@ const MainBanner = () => {
         dragFree
         slideGap="md"
         align="start"
+        classNames={{
+          controls: styles.mainBanner__controls,
+          control: styles.mainBanner__control,
+        }}
       >
         <Carousel.Slide>
           <ImageBanner />

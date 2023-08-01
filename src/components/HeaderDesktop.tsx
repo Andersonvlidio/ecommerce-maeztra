@@ -1,20 +1,25 @@
 import Image from "next/image";
 import styles from "../styles/components/headerDesktop.module.scss";
 
-import MenuDesktop from "./MenuDesktop";
 import { useState } from "react";
+import MenuDesktop from "./MenuDesktop";
+import useFixedHeader from "../utils/FixerdHeader";
 
 const HeaderDesktop = () => {
   const [inputValue, setInputValue] = useState("");
+  const { isHeaderFixed } = useFixedHeader();
   const handleButtonClick = () => {
     setInputValue("");
   };
+  const headerClasses = `${styles.headerDesktop__containerHeaderDesktop} ${
+    isHeaderFixed ? styles.headerDesktop__fixo : ""
+  }`;
   return (
     <>
-      <header className={styles.headerDesktop__containerHeaderDesktop}>
-        <div className={styles.headerDesktop__containerLogo}>
+      <header className={headerClasses}>
+        <a className={styles.headerDesktop__containerLogo} href="#">
           <Image src="/logo-maeztra.jpg" alt="logo" width={110} height={12} />
-        </div>
+        </a>
 
         <div className={styles.headerDesktop__containerInput}>
           <input

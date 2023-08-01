@@ -1,0 +1,109 @@
+@import "../utils/mixins";
+
+.modalComponent__{
+
+  &bodyModal{
+    padding: 0;
+  }
+
+  &headerModal{
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    outline: none;
+    border: none;
+  }
+
+  &closeModal{
+    outline: none !important;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    &::after{
+      content: "Fechar";
+      @include text("p", $fontRegular);
+      color: $gray;
+      position: absolute;
+      right: 36px;
+      top: 15px;
+      cursor: pointer;
+    }
+  }
+
+  &innerModal{
+    top: 25% !important;
+  }
+
+
+  &mainModal{
+    @include display-flex(center, center, row);
+  }
+
+  &containerModalComponent{
+    @include display-flex(center, center, column);
+    padding: 40px 20px 24px;
+  }
+
+  &icon{
+    margin-bottom: 12px;
+  }
+
+  &title{
+    @include text("p", $fontRegular);
+    color: $gray;
+    margin-bottom: 12px;
+  }
+  &subtitle{
+    @include text("m", $fontRegular);
+    color: $gray;
+  }
+  &text{
+    @include text("g", $fontBold);
+    color: $gray;
+    margin-bottom: 25px;
+  }
+
+
+
+  &containerInput{
+    @include display-flex(center, center, column);
+    gap: 12px;
+    width: 100%;
+  }
+
+  &input{
+    border-radius: 5px;
+    border: 1px solid #C4C4C4;
+    background: $white;
+    @include size(258px, 40px);
+    &::placeholder{
+      @include text("m", $fontRegular);
+      color: $secondary-color;
+      padding: 10px;
+    }
+    @include mq('1024'){
+      @include size(322px, 40px);
+    }
+  }
+
+  &button{
+    @include size(258px, 40px);
+    @include text("m", $fontRegular);
+    @include display-flex(center, center, row);
+    gap: 8px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 10px;
+    &:hover{
+      background-color: darken($primary-color, 10%);
+      cursor: pointer;
+    }
+
+    @include mq('1024'){
+      @include size(322px, 40px);
+    }
+  }
+}
