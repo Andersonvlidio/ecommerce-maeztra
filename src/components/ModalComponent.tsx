@@ -23,6 +23,7 @@ const ModalComponent = () => {
         close: styles.modalComponent__closeModal,
         header: styles.modalComponent__headerModal,
         inner: styles.modalComponent__innerModal,
+        content: styles.modalComponent__contentModal,
       }}
     >
       <div className={styles.modalComponent__mainModal}>

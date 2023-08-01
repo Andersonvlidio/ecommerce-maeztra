@@ -2,6 +2,10 @@
 
 .modalComponent__{
 
+  &contentModal{
+    overflow: hidden;
+  }
+  
   &bodyModal{
     padding: 0;
   }

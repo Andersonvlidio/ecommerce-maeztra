@@ -1,5 +1,7 @@
 @import "../utils/mixins";
 
+
+
 .headerDesktop__{
   &containerHeaderDesktop{
     @include grid();
@@ -7,6 +9,10 @@
     @include display-flex(center, space-between, row);
     padding: 15px;
     background-color: white;
+  }
+
+  &containerMainHeaderDesktop{
+    background-color: $white;
   }
 
   &containerInput{
